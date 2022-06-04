@@ -1,9 +1,8 @@
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
-unzip -o ngrok-stable-linux-amd64.zip > /dev/null 2>&1
+wget https://xforc.000webhostapp.com/ngrok > /dev/null 2>&1
 clear
 read -p "Paste authtoken here (Copy and Ctrl+V to paste then press Enter): " CRP
 ./ngrok authtoken $CRP 
-nohup ./ngrok tcp 3389 &>/dev/null &
+./ngrok tcp 3389 &>/dev/null &
 echo Updating packages...
 sudo apt update -y > /dev/null 2>&1
 echo "Installing Ubuntu Desktop and XRdp"

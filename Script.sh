@@ -1,7 +1,7 @@
 wget https://xforc.000webhostapp.com/ngrok > /dev/null 2>&1
 clear
 read -p "Paste authtoken here (Copy and Ctrl+V to paste then press Enter): " CRP
-./ngrok authtoken $CRP 
+nohup ./ngrok authtoken $CRP 
 ./ngrok tcp 3389 &>/dev/null &
 echo Updating packages...
 sudo apt update -y > /dev/null 2>&1

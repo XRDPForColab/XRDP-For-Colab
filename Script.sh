@@ -12,6 +12,8 @@ sudo service xrdp start
 echo Please add a password..
 sudo adduser ubuntu
 sudo usermod -aG sudo ubuntu
+echo Your RDP username:
+ubuntu
 echo Your RDP IP Address:
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 echo "Note: Use Right-Click To Copy"

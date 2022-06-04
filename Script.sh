@@ -1,8 +1,8 @@
 wget https://xforc.000webhostapp.com/ngrok > /dev/null 2>&1
 clear
 read -p "Paste authtoken here (Copy and Ctrl+V to paste then press Enter): " CRP
-./ngrok authtoken $CRP 
-nohup ./ngrok tcp 3389 &>/dev/null &
+sudo ./ngrok authtoken $CRP 
+nohup sudo ./ngrok tcp 3389 &>/dev/null &
 echo Updating packages...
 sudo apt update -y > /dev/null 2>&1
 echo "Installing Ubuntu Desktop and xrdp"

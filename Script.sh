@@ -1,4 +1,6 @@
-wget https://xforc.000webhostapp.com/ngrok > /dev/null 2>&1
+wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.zip > /dev/null 2>&1
+unzip -o ngrok-stable-linux-amd64.zip > /dev/null 2>&1
+rm -rf ngrok-stable-linux-amd64.zip
 clear
 read -p "Paste authtoken here (Copy and Ctrl+V to paste then press Enter): " CRP
 sudo ./ngrok authtoken $CRP 

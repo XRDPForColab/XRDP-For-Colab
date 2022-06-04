@@ -12,8 +12,9 @@ echo "Installing Ubuntu Desktop and xrdp"
 sudo apt install ubuntu-desktop xrdp curl -y > /dev/null 2>&1
 sudo service xrdp start
 echo Please add a user...
-sudo adduser ubuntu
-sudo usermod -aG sudo ubuntu
+sudo adduser rdp
+sudo usermod -aG sudo rdp
+echo Your RDP Username: rdp
 echo Your RDP IP Address:
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 echo "Note: Use Right-Click To Copy"

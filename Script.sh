@@ -8,8 +8,8 @@ read -p "Paste authtoken here (Copy and Ctrl+V to paste then press Enter): " CRP
 nohup ./ngrok tcp 3389 &>/dev/null &
 echo Updating packages...
 sudo apt update -y > /dev/null 2>&1
-echo "Installing Ubuntu Desktop and xrdp"
-sudo apt install ubuntu-desktop xrdp curl -y > /dev/null 2>&1
+echo "Installing XUbuntu Desktop and xrdp"
+sudo apt install xubuntu-desktop xrdp curl -y > /dev/null 2>&1
 sudo service xrdp start
 echo Please add a user...
 sudo adduser rdp
